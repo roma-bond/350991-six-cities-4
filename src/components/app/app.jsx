@@ -4,11 +4,11 @@ import Main from "../main/main.jsx";
 
 const titleHandler = () => {};
 
-const App = ({offersAmount, offersNames}) => {
+const App = ({offersAmount, offers}) => {
   return (
     <Main
       offersAmount={offersAmount}
-      offersNames={offersNames}
+      offers={offers}
       onTitleClick={titleHandler}
     />
   );
@@ -16,7 +16,7 @@ const App = ({offersAmount, offersNames}) => {
 
 App.propTypes = {
   offersAmount: PropTypes.number.isRequired,
-  offersNames: PropTypes.array.isRequired
+  offers: PropTypes.array.isRequired
 };
 
 export default App;

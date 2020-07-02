@@ -1,8 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import OffersList from "./offers-list.jsx";
 
-const OFFERS_AMOUNT = 312;
 const offers = [{
   premium: true,
   price: 120,
@@ -33,11 +32,11 @@ const offers = [{
   photoSrc: `img/apartment-03.jpg`
 }];
 
-it(`Render App`, () => {
+it(`Should Offers List render correctly`, () => {
   const tree = renderer
-    .create(<App
-      offersAmount={OFFERS_AMOUNT}
+    .create(<OffersList
       offers={offers}
+      onTitleClick={() => {}}
     />)
     .toJSON();
 
