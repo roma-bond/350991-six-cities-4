@@ -1,8 +1,3 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import App from "./app.jsx";
-
-const OFFERS_AMOUNT = 312;
 const offers = [{
   premium: true,
   price: 120,
@@ -33,13 +28,4 @@ const offers = [{
   photoSrc: `img/apartment-03.jpg`
 }];
 
-it(`Render App`, () => {
-  const tree = renderer
-    .create(<App
-      offersAmount={OFFERS_AMOUNT}
-      offers={offers}
-    />)
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
+export {offers};
