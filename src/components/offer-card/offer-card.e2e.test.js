@@ -8,8 +8,8 @@ const offer = {
   price: 120,
   name: `Beautiful & luxurious apartment at great location`,
   type: `Apartment`,
-  rating: 80,
-  photoSrc: `img/apartment-01.jpg`
+  rating: 4,
+  photoSrc: [`img/apartment-01.jpg`]
 };
 
 Enzyme.configure({
@@ -36,6 +36,23 @@ describe(`Offer card component`, () => {
     });
 
     expect(onTitleClick.mock.calls.length).toBe(1);
+  });
+
+  it(`Offer data is passed to click handler`, () => {
+    const onTitleClick = jest.fn((...args) => [...args]);
+    const onOfferCardHover = jest.fn();
+
+    const card = shallow(
+        <OfferCard
+          offer={offer}
+          onTitleClick={onTitleClick}
+          onOfferCardHover={onOfferCardHover}
+        />
+    );
+
+    const cardTitleElement = card.find(`.place-card__name`);
+    cardTitleElement.simulate(`click`, offer);
+    expect(onTitleClick.mock.calls[0][0]).toMatchObject(offer);
   });
 
   it(`Offer data is passed to hover handler`, () => {

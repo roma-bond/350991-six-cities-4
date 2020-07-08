@@ -1,30 +1,35 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import Offer from "../offer-card/offer-card.jsx";
+import OfferCard from "../offer-card/offer-card.jsx";
 
 class OffersList extends PureComponent {
   constructor(props) {
     super(props);
+    this.clickHandler = this.clickHandler.bind(this);
 
     this.state = {
-      activeOffer: undefined
+      activeOffer: {}
     };
   }
 
+  clickHandler() {
+    this.props.onTitleClick(this.state.activeOffer);
+  }
+
   render() {
-    const {offers, onTitleClick} = this.props;
+    const {offers} = this.props;
 
     return (
       offers.map((offer, index) => (
-        <Offer
+        <OfferCard
           offer={offer}
           key={`${index}-${offer.name}`}
-          onTitleClick={onTitleClick}
           onOfferCardHover={() => {
             this.setState({
               activeOffer: offer
             });
           }}
+          onTitleClick={this.clickHandler}
         />
       ))
     );
