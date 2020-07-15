@@ -99,7 +99,7 @@ const Main = (props) => {
             <div className="cities__right-section">
               <section className="cities__map map">
                 <Map
-                  coordinates={offers[0].coordinates}
+                  coordinates={offers.map((offer) => offer.coordinates)}
                 />
               </section>
             </div>

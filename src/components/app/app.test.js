@@ -2,6 +2,25 @@ import React from "react";
 import renderer from "react-test-renderer";
 import App from "./app.jsx";
 
+jest.mock(`leaflet`, () => {
+  const map = {
+    fitBounds: jest.fn(),
+    setView: jest.fn()
+  };
+
+  return {
+    map: jest.fn(() => map),
+    tileLayer: () => ({
+      addTo: jest.fn()
+    }),
+    latLngBounds: jest.fn(),
+    icon: jest.fn(),
+    marker: () => ({
+      addTo: jest.fn()
+    }),
+  };
+});
+
 const OFFERS_AMOUNT = 312;
 const offers = [{
   premium: true,

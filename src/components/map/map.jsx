@@ -31,21 +31,27 @@ class Map extends PureComponent {
       })
       .addTo(map);
 
-    const offerCords = this.props.coordinates;
-    leaflet
-      .marker(offerCords, {icon})
-      .addTo(map);
+    this.props.coordinates.forEach((coords) => {
+      leaflet
+        .marker(coords, {icon})
+        .addTo(map);
+    });
   }
 
   render() {
     return (
-      <div id="map" style={{height: `100%`}}></div>
+      <div
+        id="map"
+        style={{height: `100%`}}
+        ref={this._mapRef}
+      >
+      </div>
     );
   }
 }
 
 Map.propTypes = {
-  coordinates: PropTypes.arrayOf(PropTypes.number).isRequired
+  coordinates: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired
 };
 
 export default Map;
