@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React, {PureComponent, createRef} from "react";
 import PropTypes from "prop-types";
 import leaflet from "leaflet";
 
@@ -43,7 +43,6 @@ class Map extends PureComponent {
       <div
         id="map"
         style={{height: `100%`}}
-        ref={this._mapRef}
       >
       </div>
     );
