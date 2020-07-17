@@ -5,7 +5,21 @@ const offers = [{
   type: `Apartment`,
   rating: 4,
   photoSrc: [`img/apartment-01.jpg`, `img/room.jpg`, `img/apartment-02.jpg`, `img/apartment-03.jpg`],
-  coordinates: [52.3909553943508, 4.85309666406198]
+  coordinates: [52.3909553943508, 4.85309666406198],
+  reviews: [
+    {
+      comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+      date: `2019-05-08T14:13:56.569Z`,
+      id: 1,
+      rating: 4,
+      user: {
+        avatar: `img/avatar-max.jpg`,
+        id: 4,
+        pro: false,
+        name: `Max`
+      }
+    }
+  ]
 }, {
   premium: false,
   price: 80,
@@ -13,7 +27,21 @@ const offers = [{
   type: `Private room`,
   rating: 4,
   photoSrc: [`img/room.jpg`],
-  coordinates: [52.369553943508, 4.85309666406198]
+  coordinates: [52.369553943508, 4.85309666406198],
+  reviews: [
+    {
+      comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+      date: `2019-05-08T14:13:56.569Z`,
+      id: 1,
+      rating: 4,
+      user: {
+        avatar: `img/avatar-max.jpg`,
+        id: 4,
+        pro: false,
+        name: `Max`
+      }
+    }
+  ]
 }, {
   premium: false,
   price: 132,
@@ -21,7 +49,21 @@ const offers = [{
   type: `Apartment`,
   rating: 4,
   photoSrc: [`img/apartment-02.jpg`],
-  coordinates: [52.3909553943508, 4.929309666406198]
+  coordinates: [52.3909553943508, 4.929309666406198],
+  reviews: [
+    {
+      comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+      date: `2019-05-08T14:13:56.569Z`,
+      id: 1,
+      rating: 4,
+      user: {
+        avatar: `img/avatar-max.jpg`,
+        id: 4,
+        pro: false,
+        name: `Max`
+      }
+    }
+  ]
 }, {
   premium: true,
   price: 180,
@@ -29,7 +71,21 @@ const offers = [{
   type: `Apartment`,
   rating: 5,
   photoSrc: [`img/apartment-03.jpg`],
-  coordinates: [52.3809553943508, 4.939309666406198]
+  coordinates: [52.3809553943508, 4.939309666406198],
+  reviews: [
+    {
+      comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+      date: `2019-05-08T14:13:56.569Z`,
+      id: 1,
+      rating: 4,
+      user: {
+        avatar: `img/avatar-max.jpg`,
+        id: 4,
+        pro: false,
+        name: `Max`
+      }
+    }
+  ]
 }];
 
 export {offers};

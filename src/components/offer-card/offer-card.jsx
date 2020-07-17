@@ -2,16 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const OfferCard = (props) => {
-  const {offer, onTitleClick, onOfferCardHover} = props;
+  const {offer, classPrefix, onTitleClick, onOfferCardHover} = props;
 
   return (
-    <article className="cities__place-card place-card" onMouseOver={onOfferCardHover}>
+    <article className={`${classPrefix}__place-card place-card`} onMouseOver={onOfferCardHover}>
       {offer.premium &&
         <div className="place-card__mark">
           <span>Premium</span>
         </div>
       }
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${classPrefix}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
           <img className="place-card__image" src={offer.photoSrc[0]} width="260" height="200" alt="Place image"/>
         </a>
@@ -54,7 +54,8 @@ OfferCard.propTypes = {
     photoSrc: PropTypes.array.isRequired
   }).isRequired,
   onTitleClick: PropTypes.func.isRequired,
-  onOfferCardHover: PropTypes.func.isRequired
+  onOfferCardHover: PropTypes.func.isRequired,
+  classPrefix: PropTypes.string.isRequired
 };
 
 export default OfferCard;
