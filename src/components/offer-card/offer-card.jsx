@@ -5,7 +5,7 @@ const OfferCard = (props) => {
   const {offer, classPrefix, onTitleClick, onOfferCardHover} = props;
 
   return (
-    <article className={`${classPrefix}__place-card place-card`} onMouseOver={onOfferCardHover}>
+    <article className={`${classPrefix}card place-card`} onMouseOver={onOfferCardHover}>
       {offer.premium &&
         <div className="place-card__mark">
           <span>Premium</span>

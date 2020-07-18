@@ -91,7 +91,7 @@ const Main = (props) => {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 <OffersList
-                  classPrefix={`cities`}
+                  classPrefix={`cities__place-`}
                   offers={offers}
                   onTitleClick={onTitleClick}
                 />

@@ -280,7 +280,7 @@ class Offer extends PureComponent {
               <h2 className="near-places__title">Other places in the neighbourhood</h2>
               <div className="near-places__list places__list">
                 <OffersList
-                  classPrefix={`near-places`}
+                  classPrefix={`near-places__`}
                   offers={MOCK_OFFERS}
                   onTitleClick={this.onTitleClick}
                 />
