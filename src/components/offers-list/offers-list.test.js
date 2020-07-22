@@ -37,6 +37,7 @@ it(`Should Offers List render correctly`, () => {
     .create(<OffersList
       offers={offers}
       onTitleClick={() => {}}
+      classPrefix={`cities`}
     />)
     .toJSON();
 

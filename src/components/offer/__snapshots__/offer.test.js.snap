@@ -351,13 +351,13 @@ exports[`Should Offer render correctly 1`] = `
                   <p
                     className="reviews__text"
                   >
-                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.
+                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
                   </p>
                   <time
                     className="reviews__time"
-                    dateTime="2019-04-24"
+                    dateTime="2019-05-08T14:13:56.569Z"
                   >
-                    April 2019
+                    May 2019
                   </time>
                 </div>
               </li>
@@ -527,7 +527,16 @@ exports[`Should Offer render correctly 1`] = `
       </div>
       <section
         className="property__map map"
-      />
+      >
+        <div
+          id="map"
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        />
+      </section>
     </section>
     <div
       className="container"
@@ -544,7 +553,112 @@ exports[`Should Offer render correctly 1`] = `
           className="near-places__list places__list"
         >
           <article
-            className="near-places__card place-card"
+            className="near-places__place-card place-card"
+            onMouseOver={[Function]}
+          >
+            <div
+              className="place-card__mark"
+            >
+              <span>
+                Premium
+              </span>
+            </div>
+            <div
+              className="near-places__image-wrapper place-card__image-wrapper"
+            >
+              <a
+                href="#"
+              >
+                <img
+                  alt="Place image"
+                  className="place-card__image"
+                  height="200"
+                  src="img/apartment-01.jpg"
+                  width="260"
+                />
+              </a>
+            </div>
+            <div
+              className="place-card__info"
+            >
+              <div
+                className="place-card__price-wrapper"
+              >
+                <div
+                  className="place-card__price"
+                >
+                  <b
+                    className="place-card__price-value"
+                  >
+                    €
+                    120
+                  </b>
+                  <span
+                    className="place-card__price-text"
+                  >
+                    / night
+                  </span>
+                </div>
+                <button
+                  className="place-card__bookmark-button button"
+                  type="button"
+                >
+                  <svg
+                    className="place-card__bookmark-icon"
+                    height="19"
+                    width="18"
+                  >
+                    <use
+                      xlinkHref="#icon-bookmark"
+                    />
+                  </svg>
+                  <span
+                    className="visually-hidden"
+                  >
+                    To bookmarks
+                  </span>
+                </button>
+              </div>
+              <div
+                className="place-card__rating rating"
+              >
+                <div
+                  className="place-card__stars rating__stars"
+                >
+                  <span
+                    style={
+                      Object {
+                        "width": "80%",
+                      }
+                    }
+                  />
+                  <span
+                    className="visually-hidden"
+                  >
+                    Rating
+                  </span>
+                </div>
+              </div>
+              <h2
+                className="place-card__name"
+                onClick={[Function]}
+              >
+                <a
+                  href="#"
+                >
+                  Nice, cozy, warm big bed apartment
+                </a>
+              </h2>
+              <p
+                className="place-card__type"
+              >
+                Apartment
+              </p>
+            </div>
+          </article>
+          <article
+            className="near-places__place-card place-card"
+            onMouseOver={[Function]}
           >
             <div
               className="near-places__image-wrapper place-card__image-wrapper"
@@ -573,7 +687,8 @@ exports[`Should Offer render correctly 1`] = `
                   <b
                     className="place-card__price-value"
                   >
-                    €80
+                    €
+                    80
                   </b>
                   <span
                     className="place-card__price-text"
@@ -582,7 +697,7 @@ exports[`Should Offer render correctly 1`] = `
                   </span>
                 </div>
                 <button
-                  className="place-card__bookmark-button place-card__bookmark-button--active button"
+                  className="place-card__bookmark-button button"
                   type="button"
                 >
                   <svg
@@ -597,7 +712,7 @@ exports[`Should Offer render correctly 1`] = `
                   <span
                     className="visually-hidden"
                   >
-                    In bookmarks
+                    To bookmarks
                   </span>
                 </button>
               </div>
@@ -623,6 +738,7 @@ exports[`Should Offer render correctly 1`] = `
               </div>
               <h2
                 className="place-card__name"
+                onClick={[Function]}
               >
                 <a
                   href="#"
@@ -638,7 +754,8 @@ exports[`Should Offer render correctly 1`] = `
             </div>
           </article>
           <article
-            className="near-places__card place-card"
+            className="near-places__place-card place-card"
+            onMouseOver={[Function]}
           >
             <div
               className="near-places__image-wrapper place-card__image-wrapper"
@@ -667,7 +784,8 @@ exports[`Should Offer render correctly 1`] = `
                   <b
                     className="place-card__price-value"
                   >
-                    €132
+                    €
+                    132
                   </b>
                   <span
                     className="place-card__price-text"
@@ -717,105 +835,12 @@ exports[`Should Offer render correctly 1`] = `
               </div>
               <h2
                 className="place-card__name"
+                onClick={[Function]}
               >
                 <a
                   href="#"
                 >
                   Canal View Prinsengracht
-                </a>
-              </h2>
-              <p
-                className="place-card__type"
-              >
-                Apartment
-              </p>
-            </div>
-          </article>
-          <article
-            className="near-places__card place-card"
-          >
-            <div
-              className="near-places__image-wrapper place-card__image-wrapper"
-            >
-              <a
-                href="#"
-              >
-                <img
-                  alt="Place image"
-                  className="place-card__image"
-                  height="200"
-                  src="img/apartment-03.jpg"
-                  width="260"
-                />
-              </a>
-            </div>
-            <div
-              className="place-card__info"
-            >
-              <div
-                className="place-card__price-wrapper"
-              >
-                <div
-                  className="place-card__price"
-                >
-                  <b
-                    className="place-card__price-value"
-                  >
-                    €180
-                  </b>
-                  <span
-                    className="place-card__price-text"
-                  >
-                    / night
-                  </span>
-                </div>
-                <button
-                  className="place-card__bookmark-button button"
-                  type="button"
-                >
-                  <svg
-                    className="place-card__bookmark-icon"
-                    height="19"
-                    width="18"
-                  >
-                    <use
-                      xlinkHref="#icon-bookmark"
-                    />
-                  </svg>
-                  <span
-                    className="visually-hidden"
-                  >
-                    To bookmarks
-                  </span>
-                </button>
-              </div>
-              <div
-                className="place-card__rating rating"
-              >
-                <div
-                  className="place-card__stars rating__stars"
-                >
-                  <span
-                    style={
-                      Object {
-                        "width": "80%",
-                      }
-                    }
-                  />
-                  <span
-                    className="visually-hidden"
-                  >
-                    Rating
-                  </span>
-                </div>
-              </div>
-              <h2
-                className="place-card__name"
-              >
-                <a
-                  href="#"
-                >
-                  Nice, cozy, warm big bed apartment
                 </a>
               </h2>
               <p

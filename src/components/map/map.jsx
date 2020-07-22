@@ -5,6 +5,8 @@ import leaflet from "leaflet";
 class Map extends PureComponent {
   constructor(props) {
     super(props);
+
+    this._mapRef = createRef();
   }
 
   componentDidMount() {
@@ -16,7 +18,7 @@ class Map extends PureComponent {
     });
 
     const zoom = 12;
-    const map = leaflet.map(`map`, {
+    const map = leaflet.map(this._mapRef.current, {
       center: city,
       zoom,
       zoomControl: false,
@@ -41,6 +43,7 @@ class Map extends PureComponent {
   render() {
     return (
       <div
+        ref={this._mapRef}
         id="map"
         style={{height: `100%`}}
       >

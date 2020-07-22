@@ -9,7 +9,22 @@ const offer = {
   name: `Beautiful & luxurious apartment at great location`,
   type: `Apartment`,
   rating: 4,
-  photoSrc: [`img/apartment-01.jpg`]
+  photoSrc: [`img/apartment-01.jpg`],
+  coordinates: [52.3909553943508, 4.85309666406198],
+  reviews: [
+    {
+      comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+      date: `2019-05-08T14:13:56.569Z`,
+      id: 1,
+      rating: 4,
+      user: {
+        avatar: `img/avatar-max.jpg`,
+        id: 4,
+        pro: false,
+        name: `Max`
+      }
+    }
+  ]
 };
 
 Enzyme.configure({
@@ -23,6 +38,7 @@ describe(`Offer card component`, () => {
 
     const card = shallow(
         <OfferCard
+          classPrefix={`cities`}
           offer={offer}
           onTitleClick={onTitleClick}
           onOfferCardHover={onOfferCardHover}
@@ -44,6 +60,7 @@ describe(`Offer card component`, () => {
 
     const card = shallow(
         <OfferCard
+          classPrefix={`cities`}
           offer={offer}
           onTitleClick={onTitleClick}
           onOfferCardHover={onOfferCardHover}
@@ -62,6 +79,7 @@ describe(`Offer card component`, () => {
     const card = shallow(
         <OfferCard
           offer={offer}
+          classPrefix={`cities`}
           onTitleClick={onTitleClick}
           onOfferCardHover={onOfferCardHover}
         />

@@ -16,7 +16,9 @@ class App extends PureComponent {
         name: ``,
         type: ``,
         rating: 0,
-        photoSrc: []
+        photoSrc: [],
+        coordinates: [],
+        reviews: []
       }
     };
   }
@@ -32,6 +34,7 @@ class App extends PureComponent {
       return (
         <Offer
           offer={this.state.displayOffer}
+          onTitleClick={this.titleClickHandler}
         />
       );
     } else {
@@ -55,6 +58,7 @@ class App extends PureComponent {
           <Route exact path="/offer">
             <Offer
               offer={this.state.displayOffer}
+              onTitleClick={this.titleClickHandler}
             />
           </Route>
         </Switch>

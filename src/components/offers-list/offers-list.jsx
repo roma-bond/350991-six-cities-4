@@ -17,11 +17,12 @@ class OffersList extends PureComponent {
   }
 
   render() {
-    const {offers} = this.props;
+    const {offers, classPrefix} = this.props;
 
     return (
       offers.map((offer, index) => (
         <OfferCard
+          classPrefix={classPrefix}
           offer={offer}
           key={`${index}-${offer.name}`}
           onOfferCardHover={() => {
@@ -39,6 +40,7 @@ class OffersList extends PureComponent {
 OffersList.propTypes = {
   offers: PropTypes.array.isRequired,
   onTitleClick: PropTypes.func.isRequired,
+  classPrefix: PropTypes.string.isRequired
 };
 
 export default OffersList;
